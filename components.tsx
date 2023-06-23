@@ -3,9 +3,10 @@ import React from "https://esm.sh/react@18.2.0";
 import { readFile, readdir } from "node:fs/promises";
 import sanitizeFilename from "https://esm.sh/sanitize-filename@1.6.3";
 import ReactMarkdown from "https://esm.sh/react-markdown@8.0.7";
-import readDirectory from "./utils/readdir.js";
-import { throwNotFound } from "./utils/form.js";
-import { addComment, getCommentsBySlug } from "./db2.js";
+// import readDirectory from "./utils/readdir.js";
+// import { throwNotFound } from "./utils/form.js";
+import { throwNotFound, readDirectory } from "./utils/utils.ts";
+import { addComment, getCommentsBySlug } from "./db2.ts";
 
 export default function Router({ url }) {
   let page;

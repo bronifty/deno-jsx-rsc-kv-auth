@@ -69,7 +69,8 @@ window.addEventListener(
       method: "POST",
       body: formData,
     });
-    setTimeout(() => navigate(slug), 2000);
+    navigate(slug);
+    // setTimeout(() => navigate(slug), 2000);
   },
   true
 );

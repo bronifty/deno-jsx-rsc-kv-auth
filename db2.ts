@@ -1,5 +1,5 @@
-const kv = await Deno.openKv();
 // const kv = await Deno.openKv("./data/sql.db");
+const kv = await Deno.openKv();
 export async function addComment({ slug, comment }) {
   const data = {
     slug,

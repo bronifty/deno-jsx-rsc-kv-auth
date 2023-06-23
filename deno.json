@@ -6,6 +6,6 @@
     "jsxFragmentFactory": "React.Fragment"
   },
   "tasks": {
-    "start": "deno run -A --unstable main.jsx"
+    "start": "deno run -A --unstable --watch main.tsx"
   }
 }
