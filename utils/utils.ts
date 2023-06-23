@@ -1,5 +1,5 @@
-import React from "https://esm.sh/react@18.2.0";
-import * as ReactDOMServer from "https://esm.sh/react-dom@18.2.0/server";
+// import React from "https://esm.sh/react@18.2.0";
+import * as ReactDOMServer from "react-dom/server";
 import { readFile, readdir } from "node:fs/promises";
 import fs from "node:fs";
 import path from "node:path";
