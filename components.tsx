@@ -1,10 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
-// import { createServer } from "node:http";
 import { readFile, readdir } from "node:fs/promises";
 import sanitizeFilename from "https://esm.sh/sanitize-filename@1.6.3";
 import ReactMarkdown from "https://esm.sh/react-markdown@8.0.7";
-// import readDirectory from "./utils/readdir.js";
-// import { throwNotFound } from "./utils/form.js";
 import { throwNotFound, readDirectory } from "./utils/utils.ts";
 import { addComment, getCommentsBySlug } from "./db2.ts";
 
@@ -94,39 +91,9 @@ async function CommentForm({ slug }) {
   );
 }
 
-// async function CommentForm({ slug }) {
-//   return (
-//     <form
-//       id={slug + "-form"}
-//       onSubmit={function onSubmitHandler(e) {
-//         e.preventDefault();
-//         const comment = e.target.elements.comment.value;
-//         console.log("in the Comment form; comment: ", comment);
-//         // const comments = await readFile(`./comments/${slug}.json`, "utf8");
-//         // const commentId = comments.length
-//         //   ? comments[comments.length - 1].commentId + 1
-//         //   : 1;
-//         const newComment = { commentId, text: comment, timestamp: Date.now() };
-//         // comments.push(newComment);
-//         // await writeFile(
-//         //   `./comments/${slug}.json`,
-//         //   JSON.stringify(comments),
-//         //   "utf8"
-//         // );
-//       }}>
-//       <textarea name="comment" required />
-//       <button type="submit">Post Comment</button>
-//     </form>
-//   );
-// }
-
 async function Comments({ slug }) {
   let comments;
   try {
-    // const commentsFile = await readFile("./comments/comments.json", "utf8");
-    // const allComments = JSON.parse(commentsFile);
-    // comments = allComments.filter((comment) => comment.slug === slug);
-    // const comments = await kv.get(["comments"]);
     comments = await getCommentsBySlug({ slug });
     console.log("in RSC Comments; comments: ", comments, "slug: ", slug);
   } catch (err) {
