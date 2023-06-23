@@ -1,0 +1,11 @@
+{
+  "importMap": "import_map.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment"
+  },
+  "tasks": {
+    "start": "deno run -A --unstable main.jsx"
+  }
+}
